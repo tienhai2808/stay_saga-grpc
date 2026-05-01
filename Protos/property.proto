@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package property;
+
+option csharp_namespace = "StaySaga.GRPC.Property";
+
+service PropertyService {
+  rpc Ping (PingRequest) returns (PongResponse);
+}
+
+message PingRequest {}
+
+message PongResponse {}
