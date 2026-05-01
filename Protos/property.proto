@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package property;
 
-option csharp_namespace = "StaySaga.GRPC.Property";
+option csharp_namespace = "Grpc.Property";
 
 service PropertyService {
   rpc Ping (PingRequest) returns (PongResponse);

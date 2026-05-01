@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace StaySaga.GRPC.Property {
+namespace Grpc.Property {
   public static partial class PropertyService
   {
     static readonly string __ServiceName = "property.PropertyService";
@@ -46,12 +46,12 @@ namespace StaySaga.GRPC.Property {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::StaySaga.GRPC.Property.PingRequest> __Marshaller_property_PingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::StaySaga.GRPC.Property.PingRequest.Parser));
+    static readonly grpc::Marshaller<global::Grpc.Property.PingRequest> __Marshaller_property_PingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.PingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::StaySaga.GRPC.Property.PongResponse> __Marshaller_property_PongResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::StaySaga.GRPC.Property.PongResponse.Parser));
+    static readonly grpc::Marshaller<global::Grpc.Property.PongResponse> __Marshaller_property_PongResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.PongResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::StaySaga.GRPC.Property.PingRequest, global::StaySaga.GRPC.Property.PongResponse> __Method_Ping = new grpc::Method<global::StaySaga.GRPC.Property.PingRequest, global::StaySaga.GRPC.Property.PongResponse>(
+    static readonly grpc::Method<global::Grpc.Property.PingRequest, global::Grpc.Property.PongResponse> __Method_Ping = new grpc::Method<global::Grpc.Property.PingRequest, global::Grpc.Property.PongResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Ping",
@@ -61,7 +61,7 @@ namespace StaySaga.GRPC.Property {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::StaySaga.GRPC.Property.PropertyReflection.Descriptor.Services[0]; }
+      get { return global::Grpc.Property.PropertyReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of PropertyService</summary>
@@ -69,7 +69,7 @@ namespace StaySaga.GRPC.Property {
     public abstract partial class PropertyServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::StaySaga.GRPC.Property.PongResponse> Ping(global::StaySaga.GRPC.Property.PingRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Property.PongResponse> Ping(global::Grpc.Property.PingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -104,22 +104,22 @@ namespace StaySaga.GRPC.Property {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::StaySaga.GRPC.Property.PongResponse Ping(global::StaySaga.GRPC.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Grpc.Property.PongResponse Ping(global::Grpc.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Ping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::StaySaga.GRPC.Property.PongResponse Ping(global::StaySaga.GRPC.Property.PingRequest request, grpc::CallOptions options)
+      public virtual global::Grpc.Property.PongResponse Ping(global::Grpc.Property.PingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Ping, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::StaySaga.GRPC.Property.PongResponse> PingAsync(global::StaySaga.GRPC.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.PongResponse> PingAsync(global::Grpc.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::StaySaga.GRPC.Property.PongResponse> PingAsync(global::StaySaga.GRPC.Property.PingRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.PongResponse> PingAsync(global::Grpc.Property.PingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Ping, null, options, request);
       }
@@ -147,7 +147,7 @@ namespace StaySaga.GRPC.Property {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PropertyServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Ping, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::StaySaga.GRPC.Property.PingRequest, global::StaySaga.GRPC.Property.PongResponse>(serviceImpl.Ping));
+      serviceBinder.AddMethod(__Method_Ping, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.Property.PingRequest, global::Grpc.Property.PongResponse>(serviceImpl.Ping));
     }
 
   }

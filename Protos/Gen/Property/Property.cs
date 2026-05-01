@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace StaySaga.GRPC.Property {
+namespace Grpc.Property {
 
   /// <summary>Holder for reflection information generated from property.proto</summary>
   public static partial class PropertyReflection {
@@ -26,13 +26,13 @@ namespace StaySaga.GRPC.Property {
           string.Concat(
             "Cg5wcm9wZXJ0eS5wcm90bxIIcHJvcGVydHkiDQoLUGluZ1JlcXVlc3QiDgoM",
             "UG9uZ1Jlc3BvbnNlMkgKD1Byb3BlcnR5U2VydmljZRI1CgRQaW5nEhUucHJv",
-            "cGVydHkuUGluZ1JlcXVlc3QaFi5wcm9wZXJ0eS5Qb25nUmVzcG9uc2VCGaoC",
-            "FlN0YXlTYWdhLkdSUEMuUHJvcGVydHliBnByb3RvMw=="));
+            "cGVydHkuUGluZ1JlcXVlc3QaFi5wcm9wZXJ0eS5Qb25nUmVzcG9uc2VCEKoC",
+            "DUdycGMuUHJvcGVydHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::StaySaga.GRPC.Property.PingRequest), global::StaySaga.GRPC.Property.PingRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::StaySaga.GRPC.Property.PongResponse), global::StaySaga.GRPC.Property.PongResponse.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Property.PingRequest), global::Grpc.Property.PingRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.Property.PongResponse), global::Grpc.Property.PongResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -54,7 +54,7 @@ namespace StaySaga.GRPC.Property {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::StaySaga.GRPC.Property.PropertyReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Grpc.Property.PropertyReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -215,7 +215,7 @@ namespace StaySaga.GRPC.Property {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::StaySaga.GRPC.Property.PropertyReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.Property.PropertyReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
