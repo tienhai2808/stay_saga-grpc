@@ -48,15 +48,37 @@ namespace Grpc.Property {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Grpc.Property.PingRequest> __Marshaller_property_PingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.PingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Grpc.Property.PongResponse> __Marshaller_property_PongResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.PongResponse.Parser));
+    static readonly grpc::Marshaller<global::Grpc.Property.EmptyResponse> __Marshaller_property_EmptyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.EmptyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Grpc.Property.ReserveRequest> __Marshaller_property_ReserveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.ReserveRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Grpc.Property.ReserveResponse> __Marshaller_property_ReserveResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.ReserveResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Grpc.Property.ReleaseRequest> __Marshaller_property_ReleaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.Property.ReleaseRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Grpc.Property.PingRequest, global::Grpc.Property.PongResponse> __Method_Ping = new grpc::Method<global::Grpc.Property.PingRequest, global::Grpc.Property.PongResponse>(
+    static readonly grpc::Method<global::Grpc.Property.PingRequest, global::Grpc.Property.EmptyResponse> __Method_Ping = new grpc::Method<global::Grpc.Property.PingRequest, global::Grpc.Property.EmptyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Ping",
         __Marshaller_property_PingRequest,
-        __Marshaller_property_PongResponse);
+        __Marshaller_property_EmptyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Grpc.Property.ReserveRequest, global::Grpc.Property.ReserveResponse> __Method_Reserve = new grpc::Method<global::Grpc.Property.ReserveRequest, global::Grpc.Property.ReserveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Reserve",
+        __Marshaller_property_ReserveRequest,
+        __Marshaller_property_ReserveResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Grpc.Property.ReleaseRequest, global::Grpc.Property.EmptyResponse> __Method_Release = new grpc::Method<global::Grpc.Property.ReleaseRequest, global::Grpc.Property.EmptyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Release",
+        __Marshaller_property_ReleaseRequest,
+        __Marshaller_property_EmptyResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -69,7 +91,19 @@ namespace Grpc.Property {
     public abstract partial class PropertyServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Grpc.Property.PongResponse> Ping(global::Grpc.Property.PingRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Property.EmptyResponse> Ping(global::Grpc.Property.PingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Property.ReserveResponse> Reserve(global::Grpc.Property.ReserveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.Property.EmptyResponse> Release(global::Grpc.Property.ReleaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -104,24 +138,64 @@ namespace Grpc.Property {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Grpc.Property.PongResponse Ping(global::Grpc.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Grpc.Property.EmptyResponse Ping(global::Grpc.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Ping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Grpc.Property.PongResponse Ping(global::Grpc.Property.PingRequest request, grpc::CallOptions options)
+      public virtual global::Grpc.Property.EmptyResponse Ping(global::Grpc.Property.PingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Ping, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.PongResponse> PingAsync(global::Grpc.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.EmptyResponse> PingAsync(global::Grpc.Property.PingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.PongResponse> PingAsync(global::Grpc.Property.PingRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.EmptyResponse> PingAsync(global::Grpc.Property.PingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Ping, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Grpc.Property.ReserveResponse Reserve(global::Grpc.Property.ReserveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Reserve(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Grpc.Property.ReserveResponse Reserve(global::Grpc.Property.ReserveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Reserve, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.ReserveResponse> ReserveAsync(global::Grpc.Property.ReserveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReserveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.ReserveResponse> ReserveAsync(global::Grpc.Property.ReserveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Reserve, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Grpc.Property.EmptyResponse Release(global::Grpc.Property.ReleaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Release(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Grpc.Property.EmptyResponse Release(global::Grpc.Property.ReleaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Release, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.EmptyResponse> ReleaseAsync(global::Grpc.Property.ReleaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReleaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Grpc.Property.EmptyResponse> ReleaseAsync(global::Grpc.Property.ReleaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Release, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -137,7 +211,9 @@ namespace Grpc.Property {
     public static grpc::ServerServiceDefinition BindService(PropertyServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Ping, serviceImpl.Ping).Build();
+          .AddMethod(__Method_Ping, serviceImpl.Ping)
+          .AddMethod(__Method_Reserve, serviceImpl.Reserve)
+          .AddMethod(__Method_Release, serviceImpl.Release).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -147,7 +223,9 @@ namespace Grpc.Property {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PropertyServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Ping, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.Property.PingRequest, global::Grpc.Property.PongResponse>(serviceImpl.Ping));
+      serviceBinder.AddMethod(__Method_Ping, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.Property.PingRequest, global::Grpc.Property.EmptyResponse>(serviceImpl.Ping));
+      serviceBinder.AddMethod(__Method_Reserve, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.Property.ReserveRequest, global::Grpc.Property.ReserveResponse>(serviceImpl.Reserve));
+      serviceBinder.AddMethod(__Method_Release, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.Property.ReleaseRequest, global::Grpc.Property.EmptyResponse>(serviceImpl.Release));
     }
 
   }
